@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Sacramento&display=swap');
+
+:root {
+	--header-footer-bg-color: #f6cdcf;
+	--header-footer-text-color: #ffffff;
+	--main-text: #1c1d21;
+	--main-accent-color: #c04260;
+	--hamburger-btn-bg-color: #b63e5a;
+}
+
+/* --------------- Global styles --------------- */
+
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	line-height: 1.4;
+	background-image: url('/Images/pink-marble.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+img {
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: var(--header-footer-text-color);
+}
+
+li {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin: 0;
+}
+
+/*  --------------- Animations --------------- */
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-out {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+/* --------------- Helper/Utility Classes --------------- */
+.container {
+	width: 85%;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.fade-in {
+	animation: fade-in 300ms ease-in-out forwards;
+}
+
+.fade-out {
+	animation: fade-out 300ms ease-in-out forwards;
+}
+
+.locked-screen {
+	overflow: hidden;
+}
+
+/* --------------- Nav Styles --------------- */
+#nav {
+	/* background: #cdc7c2; */
+	/* background-color: #edcba4; */
+	/* background-color: #ffdde3; */
+	/* background-color: #e4acad; */
+	background-color: var(--header-footer-bg-color);
+	/* background-color: #f0b4bd; */
+	padding: 0.5em 0;
+}
+
+.overlay {
+	display: none;
+	background-color: rgba(0, 0, 0, 0.75);
+	position: fixed;
+	top: 0rem;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.overlay.open {
+	display: block;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 98%;
+}
+
+.logo {
+	width: 30%;
+	border-radius: 50%;
+	margin-left: 1em;
+}
+
+#nav-list {
+	background-color: var(--header-footer-text-color);
+	padding: 1em 0em;
+	position: fixed;
+	width: 70%;
+	top: 0;
+	left: -100%;
+	text-align: center;
+	transition: 0.3s;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#nav-list li {
+	margin: 2em 0;
+}
+
+.list-item {
+	color: var(--main-text);
+	padding: 0.5em;
+}
+
+.list-item:hover,
+.list-item:focus {
+	color: var(--main-accent-color);
+	border-bottom: 4px solid var(--main-accent-color);
+	transition: all 0.3s ease-in-out;
+}
+
+#nav-list.show {
+	left: 0;
+}
+
+#hamburger {
+	display: block;
+	cursor: pointer;
+	margin-right: 1em;
+	background-color: var(--hamburger-btn-bg-color);
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.bar {
+	display: block;
+	width: 22px;
+	height: 2px;
+	transition: all 0.3s ease-in-out;
+	background-color: var(--header-footer-text-color);
+}
+
+.bar:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+.active .bar:nth-child(2) {
+	opacity: 0;
+}
+
+.active .bar:nth-child(1) {
+	transform: rotate(45deg) translate(5px, 5px);
+}
+
+.active .bar:nth-child(3) {
+	transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ----------- Hero Styles ----------- */
+
+.hero-img img {
+	object-fit: cover;
+	width: 100%;
+}
+
+.hero-content {
+	color: var(--main-text);
+	text-align: center;
+	padding-top: 1.5em;
+	padding-bottom: 2em;
+}
+
+.hero-content h1 {
+	font-size: 2rem;
+	margin-bottom: 0.656em;
+	line-height: 1.15;
+}
+
+.hero-content h4 {
+	margin-bottom: 1.5em;
+}
+
+.hero-content p {
+	font-size: 0.875rem;
+	font-weight: 400;
+	margin-bottom: 2em;
+}
+
+.accent-color {
+	font-family: 'Sacramento', cursive;
+	font-size: 2.8rem;
+	color: var(--main-accent-color);
+}
+
+.cta {
+	display: inline-block;
+	background-color: var(--main-accent-color);
+	color: var(--header-footer-text-color);
+	font-size: 0.875rem;
+	font-weight: 700;
+	border-radius: 50px;
+	padding: 1.143em 2.143em;
+	margin-bottom: 1em;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.cta:hover,
+.cta:focus {
+	opacity: 0.75;
+}
+
+/* --------------- Instagram --------------- */
+.instagram {
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+}
+
+.instagram h2 {
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+.insta:not(:last-child) {
+	margin-bottom: 1.5rem;
+}
+
+/* --------------- Review Styles --------------- */
+#reviews {
+	text-align: center;
+	padding-top: 1rem;
+}
+
+#reviews h2 {
+	margin-bottom: 1.5rem;
+}
+
+.review {
+	border: 1px solid #f2efea;
+	background-color: var(--header-footer-text-color);
+	padding: 2em;
+	border-radius: 5px;
+	box-shadow: 0 0 0.625em 0 rgba(40, 40, 40, 0.2);
+	margin-bottom: 2em;
+}
+
+blockquote::before {
+	color: var(--main-accent-color);
+	content: '“';
+	font-size: 4rem;
+	line-height: 0.1em;
+	vertical-align: 0.2em;
+	margin-right: 0.25em;
+}
+
+blockquote p {
+	display: inline;
+}
+
+.rating .fa-solid {
+	color: var(--main-accent-color);
+}
+
+.rating .fa-regular {
+	color: var(--main-accent-color);
+}
+
+.quoted-name {
+	margin: 1rem 0;
+}
+
+/* -------------- Footer Styles --------------- */
+.footer {
+	background: #353831;
+	padding: 1em;
+	text-align: center;
+	color: var(--header-footer-text-color);
+}
+
+.footer-list {
+	margin-bottom: 1rem;
+}
+
+.footer-item {
+	display: inline-block;
+	transition: color 0.3s ease-in-out;
+	padding: 0.5em;
+}
+
+.footer-item:not(:last-child) {
+	margin-right: 2rem;
+}
+
+.footer-item:hover,
+.footer-item:focus {
+	color: var(--hamburger-btn-bg-color);
+}
+
+.copyright {
+	margin-bottom: 1rem;
+}
+
+/* Breakpoints 640px or 688px?/ 992px?/ 1400px?*/
+@media (min-width: 40em) {
+	.insta {
+		text-align: center;
+	}
+
+	.instagram-media {
+		display: inline-block !important;
+	}
+}
+
+@media (min-width: 62em) {
+	/* --------------- Navbar Styles --------------- */
+	.logo-img {
+		margin-left: 2em;
+	}
+
+	.logo {
+		width: 40%;
+	}
+
+	#nav-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 1em;
+		background: none;
+		position: static;
+		width: 40%;
+		padding: 0;
+		margin-right: 2em;
+		font-size: 1rem;
+	}
+
+	#hamburger {
+		display: none;
+	}
+
+	/* --------------- Hero Styles --------------- */
+	#hero {
+		display: flex;
+		justify-content: space-between;
+		gap: 2em;
+		max-width: 95%;
+		margin: 0 auto;
+		/* border: 1px solid black; */
+	}
+
+	.hero-img {
+		flex: 2;
+		order: 2;
+		max-width: 69.375em;
+		/* border: 1px solid blue; */
+	}
+
+	.hero-content {
+		flex: 2;
+		order: 1;
+		padding-top: 0;
+		text-align: left;
+		margin-top: 2em;
+		/* border: 1px solid red; */
+		align-self: center;
+	}
+
+	.hero-content h1 {
+		font-size: 3.25rem;
+		margin-bottom: 2.25rem;
+	}
+
+	.hero-content h4 {
+		font-size: 1.5rem;
+	}
+
+	.hero-content p {
+		font-size: 1.125rem;
+	}
+
+	.accent-color {
+		font-size: 4rem;
+	}
+
+	.cta {
+		font-size: 1rem;
+		margin-top: 1em;
+	}
+
+	.centered-btn {
+		text-align: center;
+	}
+
+	/* --------------- Instagram --------------- */
+
+	.instagram {
+		/* border: 1px solid black; */
+		width: 95%;
+		margin: 0 auto;
+		padding-top: 0;
+	}
+
+	.instagram .container {
+		width: 100%;
+		max-width: none;
+		margin: 0 auto;
+		/* border: 1px solid red; */
+	}
+
+	.instagram-content {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+		/* border: 1px solid blue; */
+		/* width: 95%;
+		margin: 0 auto; */
+	}
+
+	.insta {
+		/* border: 1px solid red; */
+	}
+
+	.insta:not(:last-child) {
+		margin-bottom: 0;
+	}
+
+	.instagram h2 {
+		text-align: left;
+		font-size: 2.25rem;
+	}
+
+	/* --------------- Reviews Styles --------------- */
+	#reviews {
+		text-align: left;
+		padding-top: 1.5rem;
+		/* border: 1px solid brown; */
+		width: 95%;
+		margin: 0 auto;
+		padding-top: 0;
+	}
+
+	/* #reviews .container {
+		margin: 0em 2em;
+		border: 1px solid blue;
+		max-width: none;
+	} */
+
+	#reviews h2 {
+		text-align: left;
+		font-size: 2.25rem;
+	}
+
+	#reviews .container {
+		max-width: none;
+		width: 100%;
+		margin: 0 auto;
+		/* border: 1px solid purple; */
+	}
+
+	.review-content {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2.5rem;
+		/* border: 1px solid green; */
+		width: 85%;
+		margin: 0 auto;
+	}
+
+	/* .review-content {
+		display: flex;
+		justify-content: space-between;
+		gap: 2em;
+		width: 110%;
+		border: 1px solid red;
+	}
+
+	.review {
+		flex: 1 1 33%;
+		font-size: 1.125rem;
+	} */
+}
+
+@media (min-width: 90em) {
+	.hero-content {
+		margin-top: 0;
+	}
+}

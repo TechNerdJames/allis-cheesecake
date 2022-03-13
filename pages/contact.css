@@ -1,0 +1,19 @@
+.contact {
+	padding-top: 2rem;
+	width: 85%;
+	margin: 0 auto;
+}
+
+@media (min-width: 90em) {
+	html,
+	body {
+		height: 100%;
+	}
+
+	.footer {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}

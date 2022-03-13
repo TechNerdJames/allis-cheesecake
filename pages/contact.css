@@ -4,7 +4,7 @@
 	margin: 0 auto;
 }
 
-@media (min-width: 90em) {
+/* @media (min-width: 90em) {
 	html,
 	body {
 		height: 100%;
@@ -16,4 +16,4 @@
 		left: 0;
 		right: 0;
 	}
-}
+} */

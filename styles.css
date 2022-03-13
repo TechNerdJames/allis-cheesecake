@@ -312,7 +312,7 @@ blockquote p {
 /* -------------- Footer Styles --------------- */
 .footer {
 	background: #353831;
-	padding: 1em;
+	padding: 0.5em;
 	text-align: center;
 	color: var(--header-footer-text-color);
 }

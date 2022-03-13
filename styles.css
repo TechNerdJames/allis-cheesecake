@@ -25,7 +25,7 @@ html {
 
 body {
 	font-family: 'Poppins', sans-serif;
-	line-height: 1.4;
+	line-height: 1.5;
 	background-image: url('/Images/pink-marble.png');
 	background-size: cover;
 	background-position: center;
@@ -129,8 +129,9 @@ h4 {
 }
 
 #nav-list {
+	font-size: 0.875rem;
 	background-color: var(--header-footer-text-color);
-	padding: 1em 0em;
+	padding: 1rem 0em;
 	position: fixed;
 	width: 70%;
 	top: 0;
@@ -260,7 +261,7 @@ h4 {
 	text-align: center;
 }
 
-.insta:not(:last-child) {
+.post:not(:last-child) {
 	margin-bottom: 1.5rem;
 }
 
@@ -337,11 +338,12 @@ blockquote p {
 
 .copyright {
 	margin-bottom: 1rem;
+	font-size: 0.875rem;
 }
 
 /* Breakpoints 640px or 688px?/ 992px?/ 1400px?*/
 @media (min-width: 40em) {
-	.insta {
+	.post {
 		text-align: center;
 	}
 
@@ -456,16 +458,11 @@ blockquote p {
 		margin: 0 auto; */
 	}
 
-	.insta {
-		/* border: 1px solid red; */
-	}
-
-	.insta:not(:last-child) {
+	.post:not(:last-child) {
 		margin-bottom: 0;
 	}
 
 	.instagram h2 {
-		text-align: left;
 		font-size: 2.25rem;
 	}
 
@@ -486,7 +483,7 @@ blockquote p {
 	} */
 
 	#reviews h2 {
-		text-align: left;
+		text-align: center;
 		font-size: 2.25rem;
 	}
 
@@ -518,6 +515,11 @@ blockquote p {
 		flex: 1 1 33%;
 		font-size: 1.125rem;
 	} */
+
+	/*  --------------- Footer --------------- */
+	.copyright {
+		font-size: 1rem;
+	}
 }
 
 @media (min-width: 90em) {

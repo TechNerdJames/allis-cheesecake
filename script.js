@@ -7,6 +7,7 @@ const navLink = document.querySelectorAll('.list-item');
 
 hamburgerBtn.addEventListener('click', () => {
 	hamburgerBtn.classList.toggle('active');
+	body.classList.toggle('locked-screen');
 
 	if (!overlay.classList.contains('open')) {
 		overlay.classList.add('open');
@@ -26,17 +27,17 @@ hamburgerBtn.addEventListener('click', () => {
 
 	if (!navList.classList.contains('show')) {
 		navList.classList.add('show');
-		body.classList.add('locked-screen');
+		// body.classList.add('locked-screen');
 	} else {
 		navList.classList.remove('show');
-		body.classList.remove('locked-screen');
+		// body.classList.remove('locked-screen');
 	}
 });
 
 navLink.forEach((link) => {
 	link.addEventListener('click', () => {
 		navList.classList.remove('show');
-		body.classList.remove('locked-screen');
+		// body.classList.remove('locked-screen');
 		if (!overlay.classList.contains('open')) {
 			overlay.classList.add('open');
 		} else {

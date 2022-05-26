@@ -167,7 +167,7 @@ h4 {
 #hamburger {
 	display: block;
 	cursor: pointer;
-	margin-right: 1em;
+	margin-right: 0.625rem;
 	background-color: var(--hamburger-btn-bg-color);
 	border-radius: 5px;
 	padding: 10px;
@@ -195,6 +195,19 @@ h4 {
 
 .active .bar:nth-child(3) {
 	transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.nav-right {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-right: 0.3125rem;
+}
+
+.shopping-cart {
+	max-width: 1.875rem;
+	cursor: pointer;
+	margin-right: 0.3125rem;
 }
 
 /* ----------- Hero Styles ----------- */

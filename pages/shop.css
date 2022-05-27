@@ -34,11 +34,11 @@ h4 {
 }
 
 .product-img {
-	width: 100%;
+	max-width: 100%;
 	border-radius: 10px;
 }
 
-.product > p {
+.product p {
 	padding: 1em 0;
 }
 
@@ -53,14 +53,48 @@ h4 {
 	margin-bottom: 1em;
 }
 
+.row2 {
+	display: flex;
+	flex-direction: column;
+}
+
 @media (min-width: 62em) {
 	h1 {
-		margin-bottom: 0;
 		font-size: 3.25rem;
 	}
 
-	.order-form {
-		width: 100%;
-		margin: 0;
+	h4 {
+		margin-top: 0;
+	}
+
+	.shop {
+		max-width: 900px;
+	}
+
+	.product {
+		flex-direction: row;
+		align-items: flex-start;
+		gap: 20px;
+	}
+
+	.product-img {
+		max-width: 20%;
+		object-fit: cover;
+	}
+
+	.row1 {
+		flex: 2;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.row2 {
+		flex: 1;
+		align-items: center;
+	}
+
+	.margin-bottom {
+		margin-bottom: 0;
 	}
 }

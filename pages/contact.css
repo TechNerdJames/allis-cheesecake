@@ -1,5 +1,66 @@
-.contact {
-	padding-top: 2rem;
-	width: 85%;
+h1 {
+	text-align: center;
+	margin: 1em 0;
+}
+
+form {
+	background-color: white;
+	max-width: 480px;
+	width: 90%;
+	border-radius: 8px;
 	margin: 0 auto;
+	margin-bottom: 3rem;
+	padding: 2rem;
+	font-size: 0.875rem;
+}
+
+.user-input {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+	padding: 0.5rem;
+	border-radius: 10px;
+	border: 2px solid #dee2ee;
+	width: 100%;
+}
+
+.star {
+	color: red;
+}
+
+.submit-btn {
+	display: flex;
+	justify-content: center;
+}
+
+.cta {
+	border: none;
+	margin-bottom: 0;
+	cursor: pointer;
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.875rem;
+	margin-top: 0;
+}
+
+@media (min-width: 40em) {
+	.name-input {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+@media (min-width: 62em) {
+	h1 {
+		font-size: 3.25rem;
+		margin: 2rem 0;
+	}
+
+	form {
+		font-size: 1rem;
+		max-width: 500px;
+	}
+
+	.cta {
+		font-size: 1rem;
+	}
 }

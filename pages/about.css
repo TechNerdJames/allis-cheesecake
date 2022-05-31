@@ -23,17 +23,15 @@
 }
 
 @media (min-width: 27em) {
-	/* html,
 	body {
-		height: 100%;
-	} */
+		min-height: 100vh;
+	}
 
-	/* .footer {
+	.footer {
 		position: fixed;
 		bottom: 0;
-		left: 0;
-		right: 0;
-	} */
+		width: 100%;
+	}
 }
 
 @media (min-width: 62em) {

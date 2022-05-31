@@ -23,7 +23,7 @@
 }
 
 @media (min-width: 27em) {
-	body {
+	/* body {
 		min-height: 100vh;
 	}
 
@@ -31,7 +31,7 @@
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-	}
+	} */
 }
 
 @media (min-width: 62em) {

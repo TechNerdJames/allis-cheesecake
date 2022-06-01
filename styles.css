@@ -343,6 +343,7 @@ blockquote p {
 	padding: 0.5em;
 	text-align: center;
 	color: var(--header-footer-text-color);
+	width: 100%;
 }
 
 .footer-list {

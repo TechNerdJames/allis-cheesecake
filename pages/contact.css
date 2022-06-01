@@ -1,3 +1,9 @@
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
 h1 {
 	text-align: center;
 	margin: 1em 0;
@@ -12,6 +18,7 @@ form {
 	margin-bottom: 3rem;
 	padding: 2rem;
 	font-size: 0.875rem;
+	flex: 1 0 auto;
 }
 
 .user-input {

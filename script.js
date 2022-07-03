@@ -5,6 +5,8 @@ const nav_header = document.querySelector('#nav');
 const navList = document.querySelector('#nav-list');
 const navLink = document.querySelectorAll('.list-item');
 
+const activePage = window.location.pathname;
+
 hamburgerBtn.addEventListener('click', () => {
 	hamburgerBtn.classList.toggle('active');
 	body.classList.toggle('locked-screen');
@@ -57,4 +59,10 @@ navLink.forEach((link) => {
 			hamburgerBtn.classList.remove('active');
 		}
 	});
+});
+
+navLink.forEach((link) => {
+	if (link.href.includes(activePage)) {
+		link.classList.add('active-link');
+	}
 });

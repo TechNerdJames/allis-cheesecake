@@ -156,8 +156,12 @@ h4 {
 .list-item:hover,
 .list-item:focus {
 	color: var(--main-accent-color);
-	border-bottom: 4px solid var(--main-accent-color);
+	border-bottom: 3px solid var(--main-accent-color);
 	transition: all 0.3s ease-in-out;
+}
+
+.active-link {
+	color: var(--main-accent-color);
 }
 
 #nav-list.show {
@@ -237,6 +241,7 @@ h4 {
 	text-align: center;
 	padding-top: 1.5em;
 	padding-bottom: 2em;
+	letter-spacing: 0.1rem;
 }
 
 .hero-content h1 {
@@ -309,7 +314,7 @@ h4 {
 	padding: 2em;
 	border-radius: 5px;
 	box-shadow: 0 0 0.625em 0 rgba(40, 40, 40, 0.2);
-	margin-bottom: 2em;
+	margin-bottom: 3em;
 }
 
 blockquote::before {
@@ -428,6 +433,7 @@ blockquote p {
 		max-width: 95%;
 		margin: 0 auto;
 		/* border: 1px solid black; */
+		/* min-height: 100vh; */
 	}
 
 	.hero-img {
@@ -466,7 +472,7 @@ blockquote p {
 
 	.cta {
 		font-size: 1rem;
-		margin-top: 3em;
+		margin-top: 1em;
 	}
 
 	.centered-btn {
@@ -479,7 +485,7 @@ blockquote p {
 		/* border: 1px solid black; */
 		width: 95%;
 		margin: 0 auto;
-		padding-top: 2rem;
+		padding-top: 3rem;
 	}
 
 	.instagram .container {
@@ -504,6 +510,7 @@ blockquote p {
 
 	.instagram h2 {
 		font-size: 2.25rem;
+		text-align: left;
 	}
 
 	/* --------------- Reviews Styles --------------- */
@@ -513,7 +520,7 @@ blockquote p {
 		/* border: 1px solid brown; */
 		width: 95%;
 		margin: 0 auto;
-		padding-top: 0;
+		padding-top: 3em;
 	}
 
 	/* #reviews .container {
@@ -523,7 +530,7 @@ blockquote p {
 	} */
 
 	#reviews h2 {
-		text-align: center;
+		text-align: left;
 		font-size: 2.25rem;
 	}
 

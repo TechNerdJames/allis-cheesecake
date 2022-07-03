@@ -62,7 +62,8 @@ navLink.forEach((link) => {
 });
 
 navLink.forEach((link) => {
-	if (link.href.includes(activePage)) {
+	if (link.href === window.location.href) {
 		link.classList.add('active-link');
+		link.setAttribute('aria-current', 'page');
 	}
 });

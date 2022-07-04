@@ -92,12 +92,7 @@ h4 {
 
 /* --------------- Nav Styles --------------- */
 #nav {
-	/* background: #cdc7c2; */
-	/* background-color: #edcba4; */
-	/* background-color: #ffdde3; */
-	/* background-color: #e4acad; */
 	background-color: var(--header-footer-bg-color);
-	/* background-color: #f0b4bd; */
 	padding: 0.5em 0;
 }
 
